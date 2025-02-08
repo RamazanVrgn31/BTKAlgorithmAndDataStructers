@@ -1,0 +1,40 @@
+﻿
+BST ADD() METODU
+----------------
+BST  sınıfını add metodunda ilk önce gelen değerin null olup olmama durumunu değerlendirdik, null olma durumunda 
+bir hata dönderdik.Daha sonra gelen değeri Node<T> sınıfı aracılığıyla bir düğüme çevirdik.
+
+Root düğümünün null olup olmama durumunu değerlendirdik null ise bu değeri ona aktardık, null olmaması durumunda Root
+düğümünü current adıyla bir değişkene aktardık.
+
+Ağaç ilişkileri için parent adında bir düğüm tanımladık.
+
+Bir döngü kurup döngü içerisinde ilk olarak parent düğümünü o anki current düğümüne aktardık (parent=current) daha sonra
+koşul ifadeleri ile gelen değerin ağaç üzerinde (bilindiği üzere parent düğümünden küçük
+olan değerler sola büyük olanlar sağa gidiyordu) uygun yere konumlandırabilmek amacıyla koşul olarak CompareTo metodu 
+aracılığıyla gelen değeri current düğümünün değeri ile kıyasladık, burdan gelen sonuca (küçük ise -1 eşitse 0 büyük ise
+1 değeri döner.) göre dallandırma yaptık.Dallandırma sonucunda küçük olma durumunda current değişkeninin değerini 
+current düğümünün solundaki düğüme eşitledik (current= current.Left), eşitleme sonrasında koşul ifadesi ile current 
+düğümünün null olup olmama durumunu değerlendirdik, null ise parent düğümünün yani o anki current değerinin sol 
+düğümüne ilgili değeri içeren düğümü yerleştirdik ve break ile döngüyü kırdık (parent.Left=newNode), null değil ise döngü devam etti if içerisinde current düğümünü sol
+tarafına eşitlemiştik burada parent tekrar sol tarafa eşitlendi ve döngü current'ın sol tarafı null olana kadar devam 
+etti. Değerin büyük olma durumunda aynı işlemler else tarafında devam etti.
+
+
+BİNARYTREE INORDER() DOLAŞMA METODU
+------------------------------------
+Recursive bir dolaşma ile Ağaç üzerinde dolaşma işlemi gerçekleştirdik. Inorder dolaşma LDR(Left Data Right) şeklinde bir dolaşma sağlıyor.
+Root düğümünden başlayarak önce en sola inip orda null değerini görene kadar devam ediyor, null değerinden sonra LDR mantığına göre geriye dönerek
+ağaç üzerindeki ifadeleri List<Node<T>> get'i public set'i private şeklinde tanımladığımız list adlı propertimize attık bunuda bu metodu 
+tanımlarken List<Node<T>> dönüşlü olarak tanımlamıştık bu listeyide metodun returnu olarak dönderdik ki daha sonra bu değerlerle işlem yapabilelim.
+
+BİNARYTREE PREORDER() DOLAŞMA METODU
+------------------------------------
+Recursive bir dolaşma ile bu sefer DLR(Data Left Right ) şeklinde bir dolaşma yaptık list üzerine ilk root değerini atadık ve sonra en sola gideriz
+ordan geriyede DLR formatında ekleyerek geriye döner burda parametrede root düğümünü verdik istersek bunu soldaki düğümden başlayarakta ekleyebi-
+lirdik.
+
+BİNARYTREE POSTORDER() DOLAŞMA METODU
+------------------------------------
+Recursive bir dolaşma ile bu sefer LRD(Left Right Data ) şeklinde bir dolaşma yaptık en sola gidip ordan LRD formatında ekleyerek geriye 
+dönerek eklemeye devam ettik. Burda parametrede root düğümünü verdik istersek bunu soldaki düğümden başlayarakta ekleyebilirdik.
