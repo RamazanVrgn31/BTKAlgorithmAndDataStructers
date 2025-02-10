@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonDataStructure", "A:\Y
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTest", "DataTest\DataTest.csproj", "{FDBB67C8-4E58-4D0B-8616-0A8139EC6D58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTypes", "A:\Yazılım\BTK Akademi\Algoritma ve Veri Yapıları İleri Seviye\Proje Dosyaları\CustomTypes\CustomTypes.csproj", "{88EC4D93-E6AD-4C0E-8CA6-35B03B71AD5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FDBB67C8-4E58-4D0B-8616-0A8139EC6D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDBB67C8-4E58-4D0B-8616-0A8139EC6D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDBB67C8-4E58-4D0B-8616-0A8139EC6D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EC4D93-E6AD-4C0E-8CA6-35B03B71AD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EC4D93-E6AD-4C0E-8CA6-35B03B71AD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EC4D93-E6AD-4C0E-8CA6-35B03B71AD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EC4D93-E6AD-4C0E-8CA6-35B03B71AD5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

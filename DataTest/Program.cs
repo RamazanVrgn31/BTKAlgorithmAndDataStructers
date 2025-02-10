@@ -13,17 +13,25 @@ namespace DataTest
             var bt = new BinaryTree<int>();
             //Buranın dönüşü List<Node<T>> olarak gelecek.Bunu istersek ForEach ile donenbiliriz.
 
-            bt.InOrder(BST.Root).ForEach(node => Console.Write(node + " "));
-
-            Console.WriteLine();
-
-            bt.ClearList();
-            bt.PreOrder(BST.Root).ForEach(node => Console.Write(node + " "));
-
-            Console.WriteLine();
-
-            bt.ClearList();
+            //bt.InOrder(BST.Root).ForEach(node => Console.Write(node + " "));
             bt.PostOrder(BST.Root).ForEach(node => Console.Write(node + " "));
+           
+
+            Console.WriteLine();
+
+            bt.LevelOrderNonRecursiveTraversal(BST.Root).ForEach(node => Console.Write(node + " "));
+
+            //bt.PostOrderNonRecursiveTraversal(BST.Root).ForEach(node => Console.Write(node + " "));
+            //bt.PreOrderNonRecursiveTraversal(BST.Root).ForEach(node => Console.Write(node + " "));
+
+
+            //bt.ClearList();
+
+
+            //Console.WriteLine();
+            //bt.PreOrder(BST.Root).ForEach(node => Console.Write(node + " "));
+            //bt.ClearList();
+            //bt.PostOrder(BST.Root).ForEach(node => Console.Write(node + " "));
 
             Console.ReadKey();
         }
