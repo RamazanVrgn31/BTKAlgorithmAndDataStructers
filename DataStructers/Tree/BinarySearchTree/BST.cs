@@ -26,7 +26,7 @@ namespace DataStructers.Tree.BinarySearchTree
         }
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return new BSTEnumarate<T>(Root);
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
